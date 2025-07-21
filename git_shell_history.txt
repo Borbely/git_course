@@ -1,0 +1,186 @@
+borbely@borbely-530XBB:~$ mkdir git_course
+borbely@borbely-530XBB:~$ cd git_course
+borbely@borbely-530XBB:~/git_course$ ls
+borbely@borbely-530XBB:~/git_course$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Repositório vazio Git inicializado em  /home/borbely/git_course/.git/
+borbely@borbely-530XBB:~/git_course$ ls
+borbely@borbely-530XBB:~/git_course$ ls -la
+total 12
+drwxrwxr-x  3 borbely borbely 4096 jul 21 16:06 .
+drwxr-x--- 27 borbely borbely 4096 jul 21 16:06 ..
+drwxrwxr-x  7 borbely borbely 4096 jul 21 16:06 .git
+borbely@borbely-530XBB:~/git_course$ cd .git/
+borbely@borbely-530XBB:~/git_course/.git$ ls
+branches  config  description  HEAD  hooks  info  objects  refs
+borbely@borbely-530XBB:~/git_course/.git$ ls -la
+total 40
+drwxrwxr-x 7 borbely borbely 4096 jul 21 16:06 .
+drwxrwxr-x 3 borbely borbely 4096 jul 21 16:06 ..
+drwxrwxr-x 2 borbely borbely 4096 jul 21 16:06 branches
+-rw-rw-r-- 1 borbely borbely   92 jul 21 16:06 config
+-rw-rw-r-- 1 borbely borbely   73 jul 21 16:06 description
+-rw-rw-r-- 1 borbely borbely   23 jul 21 16:06 HEAD
+drwxrwxr-x 2 borbely borbely 4096 jul 21 16:06 hooks
+drwxrwxr-x 2 borbely borbely 4096 jul 21 16:06 info
+drwxrwxr-x 4 borbely borbely 4096 jul 21 16:06 objects
+drwxrwxr-x 4 borbely borbely 4096 jul 21 16:06 refs
+borbely@borbely-530XBB:~/git_course/.git$ cd ..
+borbely@borbely-530XBB:~/git_course$ nano Readme.md
+borbely@borbely-530XBB:~/git_course$ nano Readme.md
+borbely@borbely-530XBB:~/git_course$ nano Readme.md
+borbely@borbely-530XBB:~/git_course$ ls
+Readme.md
+borbely@borbely-530XBB:~/git_course$ git status
+No ramo master
+
+No commits yet
+
+Arquivos não monitorados:
+  (utilize "git add <arquivo>..." para incluir o que será submetido)
+	Readme.md
+
+nada adicionado ao envio mas arquivos não registrados estão presentes (use "git add" to registrar)
+borbely@borbely-530XBB:~/git_course$ git add Readme.md
+borbely@borbely-530XBB:~/git_course$ git status
+No ramo master
+
+No commits yet
+
+Mudanças a serem submetidas:
+  (utilize "git rm --cached <arquivo>..." para não apresentar)
+	new file:   Readme.md
+
+borbely@borbely-530XBB:~/git_course$ nano Readme.md
+borbely@borbely-530XBB:~/git_course$ git status
+No ramo master
+
+No commits yet
+
+Mudanças a serem submetidas:
+  (utilize "git rm --cached <arquivo>..." para não apresentar)
+	new file:   Readme.md
+
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   Readme.md
+
+borbely@borbely-530XBB:~/git_course$ git add Readme.md
+borbely@borbely-530XBB:~/git_course$ git status
+No ramo master
+
+No commits yet
+
+Mudanças a serem submetidas:
+  (utilize "git rm --cached <arquivo>..." para não apresentar)
+	new file:   Readme.md
+
+borbely@borbely-530XBB:~/git_course$ git commit -m "Add Readme.md"
+[master (root-commit) ae2a867] Add Readme.md
+ 1 file changed, 3 insertions(+)
+ create mode 100644 Readme.md
+borbely@borbely-530XBB:~/git_course$ git status
+No ramo master
+nothing to commit, working tree clean
+borbely@borbely-530XBB:~/git_course$ nano Readme.md
+borbely@borbely-530XBB:~/git_course$ git status
+No ramo master
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   Readme.md
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+borbely@borbely-530XBB:~/git_course$ git add Readme.md
+borbely@borbely-530XBB:~/git_course$ git status
+No ramo master
+Mudanças a serem submetidas:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   Readme.md
+
+borbely@borbely-530XBB:~/git_course$ git commit -m "Add link to more info"
+[master bb1b556] Add link to more info
+ 1 file changed, 2 insertions(+)
+borbely@borbely-530XBB:~/git_course$ git log
+commit bb1b556e09d965467863f751c1e80593af80773e (HEAD -> master)
+Author: Luiz A. Borbely <borb_ely@yahoo.com.br>
+Date:   Mon Jul 21 16:40:18 2025 -0300
+
+    Add link to more info
+
+commit ae2a867d07a498bdf7e1c650ff0ffa27768f2d21
+Author: Luiz A. Borbely <borb_ely@yahoo.com.br>
+Date:   Mon Jul 21 16:34:42 2025 -0300
+
+    Add Readme.md
+borbely@borbely-530XBB:~/git_course$ git log --decorate
+commit bb1b556e09d965467863f751c1e80593af80773e (HEAD -> master)
+Author: Luiz A. Borbely <borb_ely@yahoo.com.br>
+Date:   Mon Jul 21 16:40:18 2025 -0300
+
+    Add link to more info
+
+commit ae2a867d07a498bdf7e1c650ff0ffa27768f2d21
+Author: Luiz A. Borbely <borb_ely@yahoo.com.br>
+Date:   Mon Jul 21 16:34:42 2025 -0300
+
+    Add Readme.md
+borbely@borbely-530XBB:~/git_course$ git log --author="Luiz"
+commit bb1b556e09d965467863f751c1e80593af80773e (HEAD -> master)
+Author: Luiz A. Borbely <borb_ely@yahoo.com.br>
+Date:   Mon Jul 21 16:40:18 2025 -0300
+
+    Add link to more info
+
+commit ae2a867d07a498bdf7e1c650ff0ffa27768f2d21
+Author: Luiz A. Borbely <borb_ely@yahoo.com.br>
+Date:   Mon Jul 21 16:34:42 2025 -0300
+
+    Add Readme.md
+borbely@borbely-530XBB:~/git_course$ git shortlog
+Luiz A. Borbely (2):
+      Add Readme.md
+      Add link to more info
+
+borbely@borbely-530XBB:~/git_course$ git shortlog -sn
+     2  Luiz A. Borbely
+borbely@borbely-530XBB:~/git_course$ git log --graph
+* commit bb1b556e09d965467863f751c1e80593af80773e (HEAD -> master)
+| Author: Luiz A. Borbely <borb_ely@yahoo.com.br>
+| Date:   Mon Jul 21 16:40:18 2025 -0300
+| 
+|     Add link to more info
+| 
+* commit ae2a867d07a498bdf7e1c650ff0ffa27768f2d21
+  Author: Luiz A. Borbely <borb_ely@yahoo.com.br>
+  Date:   Mon Jul 21 16:34:42 2025 -0300
+  
+      Add Readme.md
+borbely@borbely-530XBB:~/git_course$ git show bb1b556e09d965467863f751c1e80593af80773e
+commit bb1b556e09d965467863f751c1e80593af80773e (HEAD -> master)
+Author: Luiz A. Borbely <borb_ely@yahoo.com.br>
+Date:   Mon Jul 21 16:40:18 2025 -0300
+
+    Add link to more info
+
+diff --git a/Readme.md b/Readme.md
+index 49b8b9d..61e1b5f 100644
+--- a/Readme.md
++++ b/Readme.md
+@@ -1,3 +1,5 @@
+ # Git Course
+ 
+ Este é um repositorio teste para ensinar como o Git funciona.
++
++Saiba mais em [willianjusten.com.br](http://willianjusten.com.br)
+borbely@borbely-530XBB:~/git_course$ 
